@@ -292,8 +292,7 @@ services:
         bind:
           create_host_path: true
       - type: volume
-        source: db-data
-        target: /var/lib/postgresql/data
+        db-data: /var/lib/postgresql/data
         volume: {}
   device-rest:
     command:
