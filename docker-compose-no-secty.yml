@@ -267,6 +267,9 @@ services:
       POSTGRES_PASSWORD: postgres
     hostname: edgex-postgres
     image: domain:5000/postgres:16.3-alpine3.20
+    labels:
+      kompose.volume.size: 1Gi
+      kompose.volume.type: persistentVolumeClaim
     networks:
       edgex-network: null
     ports:
