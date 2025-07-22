@@ -575,12 +575,12 @@ networks:
     driver: bridge
 volumes:
   db-data:
-    name: edgex_db-data
+    name: /mnt/edgex_db-data
   kuiper-data:
-    name: edgex_kuiper-data
+    name: /mnt/edgex_kuiper-data
   kuiper-etc:
-    name: edgex_kuiper-etc
+    name: /mnt/edgex_kuiper-etc
   kuiper-log:
-    name: edgex_kuiper-log
+    name: /mnt/edgex_kuiper-log
   kuiper-plugins:
-    name: edgex_kuiper-plugins
+    name: /mnt/edgex_kuiper-plugins
