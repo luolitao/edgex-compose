@@ -190,7 +190,7 @@ services:
       KUIPER__BASIC__ENABLEOPENZITI: "false"
       KUIPER__BASIC__RESTPORT: "59720"
     hostname: edgex-kuiper
-    image: domain:5000/lfedge/ekuiper:2.1.4-alpine
+    image: domain:5000/lfedge/ekuiper:2.1-alpine
     networks:
       edgex-network: null
     ports:
