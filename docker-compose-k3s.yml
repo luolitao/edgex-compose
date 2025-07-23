@@ -203,7 +203,7 @@ services:
     restart: always
     security_opt:
       - no-new-privileges:true
-    user: kuiper:kuiper
+    user: 2002:2001
     volumes:
       - type: bind
         source: /etc/localtime
