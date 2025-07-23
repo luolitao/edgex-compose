@@ -191,6 +191,10 @@ services:
       KUIPER__BASIC__RESTPORT: "59720"
     hostname: edgex-kuiper
     image: domain:5000/lfedge/ekuiper:2.1-alpine
+<<<<<<< HEAD
+=======
+    command: [ "sh", "-c", "chown -Rh 1001:1001 /kuiper/log /kuiper/data; cp -rpd /kuiper/etc/* /mnt/kuiper-etc/; cp -rpd /kuiper/plugins/* /mnt/kuiper-plugins/; exit 0" ]
+>>>>>>> 787bc93 (image)
     networks:
       edgex-network: null
     ports:
