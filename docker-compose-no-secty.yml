@@ -294,7 +294,8 @@ services:
       - type: volume
         source: db-data
         target: /var/lib/postgresql/data
-        volume: {}
+        bind:
+          create_host_path: true
   device-rest:
     command:
       - -cp=keeper.http://edgex-core-keeper:59890
