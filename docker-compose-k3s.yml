@@ -19,7 +19,7 @@ services:
       DEVICE_SERVICES_CLIENTS_CORE_METADATA_HOST: edgex-core-metadata
       EDGEX_SECURITY_SECRET_STORE: "false"
     hostname: edgex-core-common-config-bootstrapper
-    image: edgexfoundry/core-common-config-bootstrapper:4.0.0
+    image: domain:5000/edgexfoundry/core-common-config-bootstrapper:4.0.0
     networks:
       edgex-network: null
     read_only: true
@@ -51,7 +51,7 @@ services:
       MESSAGEBUS_TYPE: mqtt
       SERVICE_HOST: edgex-core-keeper
     hostname: edgex-core-keeper
-    image: edgexfoundry/core-keeper:4.0.0
+    image: domain:5000/edgexfoundry/core-keeper:4.0.0
     networks:
       edgex-network: null
     ports:
@@ -88,7 +88,7 @@ services:
       EDGEX_SECURITY_SECRET_STORE: "false"
       SERVICE_HOST: edgex-core-metadata
     hostname: edgex-core-metadata
-    image: edgexfoundry/core-metadata:4.0.0
+    image: domain:5000/edgexfoundry/core-metadata:4.0.0
     networks:
       edgex-network: null
     ports:
@@ -115,7 +115,7 @@ services:
       POSTGRES_DB: edgex_db
       POSTGRES_PASSWORD: postgres
     hostname: edgex-postgres
-    image: postgres:16.3-alpine3.20
+    image: domain:5000/postgres:16.3-alpine3.20
     networks:
       edgex-network: null
     ports:
@@ -149,7 +149,7 @@ services:
       - /mosquitto-no-auth.conf
     container_name: edgex-mqtt-broker
     hostname: edgex-mqtt-broker
-    image: eclipse-mosquitto:2.0.21
+    image: domain:5000/eclipse-mosquitto:2.0.21
     networks:
       edgex-network: null
     ports:
@@ -190,7 +190,7 @@ services:
       KUIPER__BASIC__ENABLEOPENZITI: "false"
       KUIPER__BASIC__RESTPORT: "59720"
     hostname: edgex-kuiper
-    image: lfedge/ekuiper:2.1.4-alpine
+    image: domain:5000/lfedge/ekuiper:2.1.4-alpine
     networks:
       edgex-network: null
     ports:
@@ -234,7 +234,7 @@ services:
       EDGEX_SECURITY_SECRET_STORE: "false"
       SERVICE_HOST: edgex-ui-go
     hostname: edgex-ui-go
-    image: edgexfoundry/edgex-ui:4.0.0
+    image: domain:5000/edgexfoundry/edgex-ui:4.0.0
     networks:
       edgex-network: null
     ports:
