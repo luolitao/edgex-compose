@@ -1,6 +1,5 @@
 name: edgex
 services:
- 
   core-common-config-bootstrapper:
     command:
       - /core-common-config-bootstrapper
@@ -72,6 +71,7 @@ services:
         read_only: true
         bind:
           create_host_path: true
+
   core-metadata:
     command:
       - --registry
@@ -109,6 +109,7 @@ services:
         read_only: true
         bind:
           create_host_path: true
+
   database:
     container_name: edgex-postgres
     environment:
@@ -163,6 +164,7 @@ services:
     security_opt:
       - no-new-privileges:true
     user: 2002:2001
+
   rules-engine:
     container_name: edgex-kuiper
     depends_on:
@@ -203,7 +205,7 @@ services:
     restart: always
     security_opt:
       - no-new-privileges:true
-    user: 2002:2001
+    user: kuiper:kuiper
     volumes:
       - type: bind
         source: /etc/localtime
